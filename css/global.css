@@ -1,0 +1,149 @@
+/* 공통 */
+.wrap{
+  display: flex;
+  flex-direction: column;
+}
+.cont{
+  width: 80%;
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+}
+img{
+  width: 100%;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.ebH{
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 88px;
+  color: #1b1b1b;
+}
+.head1{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.6;
+  color: #1b1b1b;
+}
+.head2{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.6;
+  color: #1b1b1b;
+}
+.head3{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.6;
+  color: #1b1b1b;
+}
+.head4{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1b1b1b;
+}
+.menuT{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1b1b1b;
+}
+.para{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #1b1b1b;
+}
+.paraB{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #1b1b1b;
+}
+.subT{
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffad00;
+  display: block;
+}
+button{
+  color: #1b1b1b;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 30px; 
+  border: 2px solid #1b1b1b;
+  background: none;
+  border-radius: 50px;
+  display: flex;
+}
+button::after{
+  font-family: "Material Icons";
+  content: "arrow_forward";
+  font-size: 24px;
+  font-weight: 300;
+  color: #1b1b1b;
+  padding-left: 10px;
+  transition-duration: 0.5s;
+  transition-property:  padding-left;
+}
+button:hover{
+  color: #fff;
+  background-color: #ffad00;
+  border: 0;
+}
+button:hover::after{
+  padding-left: 20px;
+  color: #fff;
+}
+/* desktop */
+header .cont{
+  justify-content: space-between;
+  align-items: center;
+}
+h1{
+  width: 86px;
+}
+.material-symbols-outlined.hambuger{
+  display: none;
+}
+nav{
+  width: 49.074074074%;
+}
+.gnb{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.gnb > li{
+  position: relative;
+  width: 25%;
+}
+.gnb > li >h4 > a{
+  display: inline-block;
+  width: 100%;
+}
+.gnb .subMenu{
+  position: absolute;
+  z-index: 10;
+
+  top: 100%;
+  width: 100%;
+  display: none;
+}
+.subMenu li{
+  padding: 12px 0;
+  background-color: #fff;
+  width: 100%;
+}
+.subMenu li a:hover{
+  font-weight: 700;
+  border-bottom: 2px solid #ffad00;
+}
