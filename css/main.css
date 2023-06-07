@@ -219,11 +219,13 @@ h2 a{
   width: 32.098765432%;
   position: relative;
   height: 648px;
+  overflow: hidden;
+}
+.lastNews:hover{
   overflow-y: scroll;
 }
 .lastNews::-webkit-scrollbar {
   width: 8px;
-  position: absoulte;
 }
 .lastNews::-webkit-scrollbar-thumb {
   background-color: #ffad00;
@@ -276,6 +278,9 @@ h2 a{
   border-radius: 5px;
   border: 1px solid #bababa;
   margin-top: 4px;
+}
+.contact .email input:focus{
+  border: 1px solid #ffad00;
 }
 .contact .email form textarea{
   resize: none;

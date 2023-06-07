@@ -82,7 +82,7 @@ $( document ).ready( function() {
   new daum.roughmap.Lander({
 		"timestamp" : "1686118424934",
 		"key" : "2f2kb",
-		"mapHeight" : "360"
+		"mapHeight" : "320"
 	}).render();
 } 
 );
