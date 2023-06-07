@@ -1,108 +1,100 @@
 /* desktop */
-.mvSlide {
+.mvSlide{
   height: 900px;
 }
-
-.mvSlide .swiper-slide {
+.mvSlide .swiper-slide{
   position: relative;
 }
 
-.slideTxt {
+.slideTxt{
   position: absolute;
   top: 134px;
   left: 16.25%;
 }
-
-.slideTxt .head4 {
+.slideTxt .head4{
   margin-bottom: 27px;
 }
-
-.slideTxt .ebH {
+.slideTxt .ebH{
   margin-bottom: 40px;
 }
-
-.slideTxt .para {
+.slideTxt .para{
   margin-bottom: 50px;
 }
-
-.slideTxt button {
+.slideTxt button{
   margin-bottom: 65px;
 }
-
-.mvSlide .swiper-pagination-progressbar.swiper-pagination-horizontal {
+.mvSlide .swiper-pagination-progressbar.swiper-pagination-horizontal{
   top: 635px;
   width: 33.125%;
   left: 16.25%;
 }
-
-.mvSlide .swiper-pagination-progressbar {
+.mvSlide .swiper-pagination-progressbar{
   background: #d1d1d1;
   border-radius: 5px;
 }
-
-.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
   background-color: #ffad00;
   border-radius: 5px;
 }
-
 /* best */
-.best {
+.best{
   width: 90%;
   max-width: 1608px;
   align-self: flex-end;
   position: relative;
   margin-top: 120px;
+  height: 580px;
 }
-
-.bestSlide .swiper-wrapper {
+.bestSlide{
+  margin-top: 40px;
+  height: 470px;
+}
+.bestSlide .swiper-wrapper{
   align-items: end;
 }
-
-.bestSlide .swiper-slide {
+.bestSlide .swiper-slide{
   overflow: hidden;
   border-radius: 5px;
   transition: 0.3s;
 }
-
-.bestSlide img {
+.bestSlide img{
   height: 100%;
   width: auto;
 }
-
-.proTxt {
+.proTxt{
   position: absolute;
   bottom: 0;
 }
-
-.proTxt .swiper-slide {
+.proTxt h4,
+.proTxt p{
+  margin-bottom: 10px;
+}
+.proTxt .swiper-slide{
   padding-right: 10%;
 }
-
 /* event */
-.event {
+.event{
   margin-top: 120px;
 }
 
-.event .cont {
+.event .cont,
+.news .cont{
   flex-wrap: wrap;
 }
-
-.event .subT {
+.event .subT,
+.news .subT{
   width: 100%;
 }
-
-h2 a {
+h2 a{
   display: block;
 }
-
-.eventList {
+.eventList{
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 40px;
 }
-
-.eventList li {
+.eventList li{
   height: 400px;
   width: 6.635802469%;
   overflow: hidden;
@@ -111,24 +103,14 @@ h2 a {
   transition-duration: 0.7s;
   cursor: pointer;
 }
-
-.eventList .active {
+.eventList .active{
   width: 57.561728395%;
 }
 
-.eventList li .dim {
-  position: absolute;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: 100%;
-}
-
-.eventList li .eventT p {
+.eventList li .eventT p{
   display: none;
 }
-
-.eventList li .eventT {
+.eventList li .eventT{
   transform: rotate(90deg) translateY(-50%);
   transition: 0.5s;
   width: 400px;
@@ -138,29 +120,191 @@ h2 a {
   left: 50%;
   bottom: 90%;
 }
-
-.eventList .active .eventT {
+.eventList .active .eventT{
   bottom: 5%;
   left: 5%;
   transform: rotate(0) translateY(0);
   text-align: left;
 }
-
-.eventList .active .eventT p {
+.eventList .active .eventT p{
   display: block;
 }
-
-.eventList li .eventT h3 {
+.eventList li .eventT h3{
   color: #fff;
   height: 100%;
 }
-
-.eventList li img {
+.eventList li img{
   height: 100%;
   width: auto;
 }
-
-.eventList .active img {
+.eventList .active img{
   height: 100%;
+  width: 100%
+}
+/* company */
+.company{
+  margin-top: 120px;
+  text-align: center;
+  background:url(../img/브랜드소개.jpg) center /cover no-repeat;
+  height: 400px;
   width: 100%;
+  position: relative;
+}
+.company .dim{
+  top: 0;
+  padding: 0px 0;
+  transition-duration: 1s;
+}
+.company .dim.dimOff{
+  padding: 60px 0;
+}
+.company h2,
+.company p{
+  transition: 1s;
+  opacity: 0;
+}
+.company .opac{
+  opacity: 1;
+}
+.company h2{
+  color: #fff;
+  margin-top: 30px;
+}
+/* news */
+.news{
+  margin-top: 120px;
+}
+.news .cont{
+  justify-content: space-between;
+}
+.news h2{
+  margin-bottom: 40px;
+  width: 100%;
+}
+.news .dim{
+  padding: 5%;
+}
+.news .dim > *{
+  color: #fff;
+}
+.news .dim p{
+  width: 40%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.news .dim h3{
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.firstNews{
+  width: 66.049382716%;
+  position: relative;
+  overflow: hidden;
+  height: 648px;
+  border-radius: 5px;
+}
+.firstNews a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.firstNews img{
+  width: auto;
+  height: 100%;
+}
+.lastNews{
+  width: 32.098765432%;
+  position: relative;
+  height: 648px;
+  overflow-y: scroll;
+}
+.lastNews::-webkit-scrollbar {
+  width: 8px;
+  position: absoulte;
+}
+.lastNews::-webkit-scrollbar-thumb {
+  background-color: #ffad00;
+  border-radius: 10px;
+}
+.lastNews::-webkit-scrollbar-track {
+  background-color: #d1d1d1;
+  border-radius: 10px;
+}
+.lastNews a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.lastNews li{
+  height: 144px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.lastNews li:last-child{
+  margin-bottom: 0;
+}
+.lastNews li .dim{
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* contact */
+.contact{
+  margin-top: 120px;
+}
+.contact .cont{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact .email{
+  width: 40.586419753%;
+}
+.contact .email form{
+  display: flex;
+  flex-direction: column;
+}
+.contact .email form label{
+  margin-top: 16px;
+}
+.contact .email form input{
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #bababa;
+  margin-top: 4px;
+}
+.contact .email form textarea{
+  resize: none;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #bababa;
+  margin-top: 4px;
+  height: 180px;
+}
+.contact .email ::placeholder{
+  color: #d1d1d1;
+  font-size: 14px;
+  font-weight: 400;
+}
+.contact .email button{
+  margin-top: 30px;
+}
+.contact .callMap{
+  width: 49.074074074%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact .call{
+  width: 100%;
+}
+.contact .call .head3{
+  color: #ffad00;
+}
+.contact .map{
+  width: 100%;
+  margin-top: 40px;
 }
