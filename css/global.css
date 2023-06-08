@@ -2,6 +2,8 @@
 .wrap{
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 .cont{
   width: 80%;
@@ -79,7 +81,7 @@ img{
   color: #ffad00;
   display: block;
 }
-button{
+button.qcyBtn{
   color: #1b1b1b;
   font-size: 16px;
   font-weight: 400;
@@ -88,8 +90,10 @@ button{
   background: none;
   border-radius: 50px;
   display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
-button::after{
+button.qcyBtn::after{
   font-family: "Material Icons";
   content: "arrow_forward";
   font-size: 24px;
@@ -98,13 +102,16 @@ button::after{
   padding-left: 10px;
   transition-duration: 0.5s;
   transition-property:  padding-left;
+  box-sizing: border-box;
 }
-button:hover{
+
+button.qcyBtn:hover{
   color: #fff;
   background-color: #ffad00;
   border: 0;
+  padding: 12px 32px;
 }
-button:hover::after{
+button.qcyBtn:hover::after{
   padding-left: 20px;
   color: #fff;
 }
@@ -213,4 +220,87 @@ footer .copy{
 }
 footer .copy span{
   color: #ffad00;
+}
+@media all and (max-width: 1024px){
+  .cont{
+    width: 90%;
+  }
+  h1{
+    width: 60px;
+  }
+  .material-symbols-outlined.hambuger{
+    display: block;
+    cursor: pointer;
+  }
+  nav{
+    position: absolute;
+    height: 100vh;
+    background-color: #fff;
+    width: 320px;
+    right: -320px;
+    top: 0;
+    z-index: 99;
+    padding: 60px 40px;
+    transition-duration: 0.5s;
+  }
+  nav.on{
+    right: 0;
+  }
+  .gnb{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .gnb > li{
+    position: static;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .gnb > li >h4 > a{
+    display: inline-block;
+    width: 100%;
+  }
+  .gnb .subMenu{
+    position: static;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .subMenu li{
+    padding: 10px 0;
+    background-color: #fff;
+    width: 100%;
+  }
+  .subMenu li a:hover{
+    font-weight: 700;
+    border-bottom: 2px solid #ffad00;
+  }.ebH{
+    font-size: 48px;
+    line-height: 1;
+  }
+  footer .shopTitle{
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 768px){
+  h1{
+    width: 48px;
+  }
+  .subT,
+  h2{
+    text-align: center;
+    width: 100%;
+  }
+  footer .infoList{
+    flex-wrap: wrap;
+  }
+  footer .infoList li{
+    min-width: 160px;
+  }
+  footer .infoList h4{
+    margin-bottom: 20px;
+  }
 }
