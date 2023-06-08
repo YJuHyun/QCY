@@ -1,4 +1,28 @@
 $( document ).ready( function() {
+  let swiper2 = new Swiper('.bestSlide',{
+    slidesPerView: 4,
+    spaceBetween: 18,
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,  
+      },
+      1025: {
+        slidesPerView: 4,  
+      },
+    }
+  });
+  let swiper3 = new Swiper('.proTxt',{
+    loop: true,
+    touchRatio: 0,
+  });
+
+  swiper2.controller.control = swiper3;
+  swiper3.controller.control = swiper2;
+
   if ($(window).width() > 1024) {
     $( '.gnb li' ).mouseenter( function() {
       $( this ).children('.subMenu').stop().slideDown();
@@ -6,103 +30,70 @@ $( document ).ready( function() {
     $( '.gnb li' ).mouseleave( function() {
       $( this ).children('.subMenu').stop().slideUp();
     } );
-    const swiper2 = new Swiper('.bestSlide',{
-      slidesPerView: 4,
-      spaceBetween: 18,
-      loop: true,
-    });
+    let bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
+    let fixLoopHeight = [470, 406, 460, 386];
+
     swiper2.on('slideChangeTransitionStart', (e) => {
-      const activeWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-      const active = document.querySelector('.bestSlide .swiper-slide-active');
-      const commonSlide = document.querySelectorAll('.bestSlide .swiper-slide');
-      const idx = e.activeIndex;
-      const slides = e.slides;
+      let activeWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
+      let active = document.querySelector('.bestSlide .swiper-slide-active');
+      let commonSlide = document.querySelectorAll('.bestSlide .swiper-slide');
+      let idx = e.activeIndex;
+      let slides = e.slides;
       slides.map((d,i) => {
-          const ss = Math.abs(i - idx);
-          const cui = ss % fixLoopHeight.length;
+          let ss = Math.abs(i - idx);
           d.style.height = fixLoopHeight[ss] + 'px'
       });
       for (let j = 0; j < commonSlide.length; j++) {
       commonSlide[j].style.marginRight = '18px';
       }
       active.style.marginRight = activeWidth + 18 + 'px';
-    })
-    const bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
-    const fixLoopHeight = [470, 406, 460, 386];
-  
+    })  
     bestSlides.forEach((slide, i) => {
-      const patternIndex = i % fixLoopHeight.length;
-      slide.style.height = fixLoopHeight[patternIndex] + 'px';
+    let patternIndex = i % fixLoopHeight.length;
+    slide.style.height = fixLoopHeight[patternIndex] + 'px';
     });
-    window.addEventListener('resize', function() {
-      setTimeout(() => {
-        const proTxt = document.querySelector('.proTxt');
-        const start = document.querySelector('.bestSlide .swiper-slide-active');
-        const commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-        start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
-        proTxt.style.width = commonWidth +'px';
-        proTxt.style.left = commonWidth + 18 + 'px';
-      }, 500);
-    }, true);
-    setTimeout(() => {
-      const proTxt = document.querySelector('.proTxt');
-      const start = document.querySelector('.bestSlide .swiper-slide-active');
-      const commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-      start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
-      proTxt.style.width = commonWidth +'px';
-      proTxt.style.left = commonWidth + 18 + 'px';
-    }, 500);
-    
-    const swiper3 = new Swiper('.proTxt',{
-      loop: true,
-      touchRatio: 0,
-    });
-
-    swiper2.controller.control = swiper3;
-    swiper3.controller.control = swiper2;
   } else if ($(window).width() <= 768) {
     $('.hambuger').click(function(){
       $('nav').addClass('on')
     })
-    const swiper2 = new Swiper('.bestSlide', {
-      slidesPerView: 2,
-      spaceBetween: 18,
-      loop: true,
-    });
-    const bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
-    const fixLoopHeight = [320, 256, 300, 236];
+    let bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
+    let fixLoopHeight = [320, 256, 300, 236];
     swiper2.on('slideChangeTransitionStart', (e) => {
-      const idx = e.activeIndex;
-      const slides = e.slides;
-      slides.map((d, i) => {
-        const ss = Math.abs(i - idx);
-        const cui = ss % fixLoopHeight.length;
-        d.style.height = fixLoopHeight[ss] + 'px';
+      let active = document.querySelector('.bestSlide .swiper-slide-active');
+      let commonSlide = document.querySelectorAll('.bestSlide .swiper-slide');
+      let idx = e.activeIndex;
+      let slides = e.slides;
+      slides.map((d,i) => {
+          let ss = Math.abs(i - idx);
+          d.style.height = fixLoopHeight[ss] + 'px'
       });
-    });
-
+      for (let j = 0; j < commonSlide.length; j++) {
+      commonSlide[j].style.marginRight = '18px';
+      }
+      active.style.marginRight = 18 + 'px';
+    })  
     bestSlides.forEach((slide, i) => {
-      const patternIndex = i % fixLoopHeight.length;
+      let patternIndex = i % fixLoopHeight.length;
       slide.style.height = fixLoopHeight[patternIndex] + 'px';
     });
+    setTimeout(() => {
+      let start = document.querySelector('.bestSlide .swiper-slide-active');
+      start.style.marginRight = 18 + 'px';
+    }, 500);
   } else {
     $('.hambuger').click(function(){
       $('nav').addClass('on')
     })
-    const swiper2 = new Swiper('.bestSlide',{
-      slidesPerView: 3,
-      spaceBetween: 18,
-      loop: true,
-    });
+    let bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
+    let fixLoopHeight = [440, 376, 430, 356];
     swiper2.on('slideChangeTransitionStart', (e) => {
-      const activeWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-      const active = document.querySelector('.bestSlide .swiper-slide-active');
-      const commonSlide = document.querySelectorAll('.bestSlide .swiper-slide');
-      const idx = e.activeIndex;
-      const slides = e.slides;
+      let activeWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
+      let active = document.querySelector('.bestSlide .swiper-slide-active');
+      let commonSlide = document.querySelectorAll('.bestSlide .swiper-slide');
+      let idx = e.activeIndex;
+      let slides = e.slides;
       slides.map((d,i) => {
-          const ss = Math.abs(i - idx);
-          const cui = ss % fixLoopHeight.length;
+          let ss = Math.abs(i - idx);
           d.style.height = fixLoopHeight[ss] + 'px'
       });
       for (let j = 0; j < commonSlide.length; j++) {
@@ -110,195 +101,37 @@ $( document ).ready( function() {
       }
       active.style.marginRight = activeWidth + 18 + 'px';
     })
-    const bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
-    const fixLoopHeight = [440, 376, 430, 356];
-  
     bestSlides.forEach((slide, i) => {
-      const patternIndex = i % fixLoopHeight.length;
+      let patternIndex = i % fixLoopHeight.length;
       slide.style.height = fixLoopHeight[patternIndex] + 'px';
-    });
-    window.addEventListener('resize', function() {
-      setTimeout(() => {
-        const proTxt = document.querySelector('.proTxt');
-        const start = document.querySelector('.bestSlide .swiper-slide-active');
-        const commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-        start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
-        proTxt.style.width = commonWidth +'px';
-        proTxt.style.left = commonWidth + 18 + 'px';
-      }, 500);
-    }, true);
-    setTimeout(() => {
-      const proTxt = document.querySelector('.proTxt');
-      const start = document.querySelector('.bestSlide .swiper-slide-active');
-      const commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-      start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
-      proTxt.style.width = commonWidth +'px';
-      proTxt.style.left = commonWidth + 18 + 'px';
-    }, 500);
-
-    const swiper3 = new Swiper('.proTxt',{
-      loop: true,
-      touchRatio: 0,
-    });
-
-    swiper2.controller.control = swiper3;
-    swiper3.controller.control = swiper2;
+    });    
   }
-  $(window).resize(function(){ 
-    if ($(window).width() > 1024) {
-      $( '.gnb li' ).mouseenter( function() {
-        $( this ).children('.subMenu').stop().slideDown();
-      } );
-      $( '.gnb li' ).mouseleave( function() {
-        $( this ).children('.subMenu').stop().slideUp();
-      } );
-      const swiper2 = new Swiper('.bestSlide',{
-        slidesPerView: 4,
-        spaceBetween: 18,
-        loop: true,
-      });
-      swiper2.on('slideChangeTransitionStart', (e) => {
-        const activeWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-        const active = document.querySelector('.bestSlide .swiper-slide-active');
-        const commonSlide = document.querySelectorAll('.bestSlide .swiper-slide');
-        const idx = e.activeIndex;
-        const slides = e.slides;
-        slides.map((d,i) => {
-            const ss = Math.abs(i - idx);
-            const cui = ss % fixLoopHeight.length;
-            d.style.height = fixLoopHeight[ss] + 'px'
-        });
-        for (let j = 0; j < commonSlide.length; j++) {
-        commonSlide[j].style.marginRight = '18px';
-        }
-        active.style.marginRight = activeWidth + 18 + 'px';
-      })
-      const bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
-      const fixLoopHeight = [470, 406, 460, 386];
-    
-      bestSlides.forEach((slide, i) => {
-        const patternIndex = i % fixLoopHeight.length;
-        slide.style.height = fixLoopHeight[patternIndex] + 'px';
-      });
-      window.addEventListener('resize', function() {
-        setTimeout(() => {
-          const proTxt = document.querySelector('.proTxt');
-          const start = document.querySelector('.bestSlide .swiper-slide-active');
-          const commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-          start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
-          proTxt.style.width = commonWidth +'px';
-          proTxt.style.left = commonWidth + 18 + 'px';
-        }, 500);
-      }, true);
-      setTimeout(() => {
-        const proTxt = document.querySelector('.proTxt');
-        const start = document.querySelector('.bestSlide .swiper-slide-active');
-        const commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-        start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
-        proTxt.style.width = commonWidth +'px';
-        proTxt.style.left = commonWidth + 18 + 'px';
-      }, 500);
-      
-      const swiper3 = new Swiper('.proTxt',{
-        loop: true,
-        touchRatio: 0,
-      });
-
-      swiper2.controller.control = swiper3;
-      swiper3.controller.control = swiper2;
-    } else if ($(window).width() <= 768) {
-      $('.hambuger').click(function(){
-        $('nav').addClass('on')
-      })
-      const swiper2 = new Swiper('.bestSlide', {
-        slidesPerView: 2,
-        spaceBetween: 18,
-        loop: true,
-      });
-      const bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
-      const fixLoopHeight = [320, 256, 300, 236];
-      swiper2.on('slideChangeTransitionStart', (e) => {
-        const idx = e.activeIndex;
-        const slides = e.slides;
-        slides.map((d, i) => {
-          const ss = Math.abs(i - idx);
-          const cui = ss % fixLoopHeight.length;
-          d.style.height = fixLoopHeight[ss] + 'px';
-        });
-      });
-    
-      bestSlides.forEach((slide, i) => {
-        const patternIndex = i % fixLoopHeight.length;
-        slide.style.height = fixLoopHeight[patternIndex] + 'px';
-      });
-    } else {
-      $('.hambuger').click(function(){
-        $('nav').addClass('on')
-      })
-      const swiper2 = new Swiper('.bestSlide',{
-        slidesPerView: 3,
-        spaceBetween: 18,
-        loop: true,
-      });
-      swiper2.on('slideChangeTransitionStart', (e) => {
-        const activeWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-        const active = document.querySelector('.bestSlide .swiper-slide-active');
-        const commonSlide = document.querySelectorAll('.bestSlide .swiper-slide');
-        const idx = e.activeIndex;
-        const slides = e.slides;
-        slides.map((d,i) => {
-            const ss = Math.abs(i - idx);
-            const cui = ss % fixLoopHeight.length;
-            d.style.height = fixLoopHeight[ss] + 'px'
-        });
-        for (let j = 0; j < commonSlide.length; j++) {
-        commonSlide[j].style.marginRight = '18px';
-        }
-        active.style.marginRight = activeWidth + 18 + 'px';
-      })
-      const bestSlides = document.querySelectorAll('.bestSlide .swiper-slide');
-      const fixLoopHeight = [440, 376, 430, 356];
-    
-      bestSlides.forEach((slide, i) => {
-        const patternIndex = i % fixLoopHeight.length;
-        slide.style.height = fixLoopHeight[patternIndex] + 'px';
-      });
-      window.addEventListener('resize', function() {
-        setTimeout(() => {
-          const proTxt = document.querySelector('.proTxt');
-          const start = document.querySelector('.bestSlide .swiper-slide-active');
-          const commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-          start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
-          proTxt.style.width = commonWidth +'px';
-          proTxt.style.left = commonWidth + 18 + 'px';
-        }, 500);
-      }, true);
-      setTimeout(() => {
-        const proTxt = document.querySelector('.proTxt');
-        const start = document.querySelector('.bestSlide .swiper-slide-active');
-        const commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
-        start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
-        proTxt.style.width = commonWidth +'px';
-        proTxt.style.left = commonWidth + 18 + 'px';
-      }, 500);
-
-      const swiper3 = new Swiper('.proTxt',{
-        loop: true,
-        touchRatio: 0,
-      });
-
-      swiper2.controller.control = swiper3;
-      swiper3.controller.control = swiper2;
-    }
-  })
- const swiper1 = new Swiper('.mvSlide',{
+  let swiper1 = new Swiper('.mvSlide',{
     slidesPerView: 1,
     pagination: {
       el: '.mvSlide .swiper-pagination',
       type: 'progressbar',
     },
   })
-const eventList = document.querySelectorAll('.eventList li');
+  window.addEventListener('resize', function() {
+    setTimeout(() => {
+      let proTxt = document.querySelector('.proTxt');
+      let start = document.querySelector('.bestSlide .swiper-slide-active');
+      let commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
+      start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
+      proTxt.style.width = commonWidth +'px';
+      proTxt.style.left = commonWidth + 18 + 'px';
+    }, 500);
+  }, true);
+  setTimeout(() => {
+    let proTxt = document.querySelector('.proTxt');
+    let start = document.querySelector('.bestSlide .swiper-slide-active');
+    let commonWidth = document.querySelector('.bestSlide .swiper-slide').offsetWidth;
+    start.style.marginRight = document.querySelector('.bestSlide .swiper-slide').offsetWidth + 18 + 'px';
+    proTxt.style.width = commonWidth +'px';
+    proTxt.style.left = commonWidth + 18 + 'px';
+  }, 500);
+  let eventList = document.querySelectorAll('.eventList li');
 
   eventList.forEach((list) => {
     list.addEventListener("click", () => {
@@ -314,7 +147,7 @@ const eventList = document.querySelectorAll('.eventList li');
     });
   });
  
-  const companyOffset = $('.company').offset();
+  let companyOffset = $('.company').offset();
 
   $( window ).scroll( function() {
     if ( $( document ).scrollTop() >  companyOffset.top - 600){
@@ -330,4 +163,3 @@ const eventList = document.querySelectorAll('.eventList li');
 	}).render();
 } 
 );
-
