@@ -434,6 +434,12 @@ h2 a{
     transform: rotate(0) translateY(-50%);
     text-align: center;
   }
+  .company p{
+    font-size: 14px;
+  }
+  .company h2{
+    font-size: 28px;
+  }
   /* news */
   .firstNews,
   .lastNews{
