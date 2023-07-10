@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/* CSS 초기화 */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SUITE-Regular";
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  text-decoration: none;
+  vertical-align: baseline;
+  color: #fff;
+}
+
+img {
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  vertical-align: top;
+  appearance: none;
+  border: 1px solid #333333;
+  color: #333333;
+  border-radius: 0;
+  font-family: "SUITE-Regular";
+}
+
+input::-moz-input-placeholder {
+  color: #333333;
+}
+
+input::-webkit-input-placeholder {
+  color: #333333;
+}
+
+/* 웹폰트 CSS */
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}

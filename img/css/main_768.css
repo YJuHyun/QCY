@@ -1,0 +1,507 @@
+@media all and (max-width: 1024px){
+
+  .mySwiper > .swiper-pagination {
+    display: none;
+  }
+
+  /* main section swiper1 */
+   .main_section {
+     position: relative;
+     width: 100%;
+     background: url(../imges/p_imges/desktop_mv_01.jpg) no-repeat 55% 0% / cover;
+   }
+ 
+   .main_text {
+     position: absolute;
+     left: 10%;
+     top: 25%;
+     /* top: 29.38%; */
+     width: 35%;
+   }
+
+   /* main_section3 */
+
+  .section_container {
+    width: 80%;
+  }
+
+  .sec-tit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
+
+  .sec-tit .title {
+    margin-left: 10px;
+    color: #be3455;
+    font-size: 30px;
+  }
+
+  .service_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .service_list li {
+    width: 48%;
+    margin-bottom: 4%;
+  }
+
+  .service_list li a > img {
+    width: 98%;
+    height: auto;
+    border: 1px dashed;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px dashed #f9a4a6;
+    box-shadow: 1px 1px 5px 1px #c07b7b;
+  }
+
+  .service_list li a > img:hover {
+    opacity: 1;
+  }
+
+  .service_list li > p,
+  .sale_sub_list {
+    display: none;
+  }
+
+  .background_rose {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    left: -150px;
+    top: 50%;
+    width: 75%;
+    transform: rotate(30deg);
+  }
+
+  .background_rose:nth-child(2) {
+    left: 65%;
+    top: 10%;
+    width: 75%;
+    transform: rotate(-50deg);
+  }
+
+  
+  /* main_section4 */
+  .main_section4 .container {
+    width: 100%;
+    height: 70%;
+  }
+
+  .review_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0px;
+  }
+
+  .photodeem {
+    width: 100%;
+    height: 100%;
+    background: rgba(190, 52, 85, 0.8);
+    position: absolute;
+  }
+
+  .photodeem:hover {
+    background: rgba(190, 52, 85, 0.8);
+  }
+
+  .review_list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .review_list > div {
+    width: 100%;
+  }
+
+  .review_photo {
+    position: relative;
+  }
+
+  .review_img a img:nth-last-child(2) {
+    display: none;
+  }
+
+  .review_img a img:nth-last-child(1) {
+    display: block;
+    width: 100%;
+  }
+
+  .review_text_box {
+    background: none;
+    text-align: center;
+    position: absolute;
+  }
+
+  .texts {
+    margin-left: 0%;
+  }
+
+  .review_text_box span {
+    font-size: 3.6vw;
+    font-weight: 500;
+    display: block;
+  }
+
+  .review_text_box p {
+    font-size: 2.5vw;
+    display: block;
+    margin: 7.2% 0;
+  }
+
+  .review_text_box p:last-child {
+    font-size: 2.3vw;
+    margin: 0;
+  }
+
+  .more_btn {
+    right: 42%;
+    bottom: -92px;
+    width: 16%;
+  }
+
+  .background_rose2 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    left: -150px;
+    top: 10%;
+    width: 70%;
+    transform: rotate(-30deg);
+  }
+
+  .background_rose2:nth-child(2) {
+    left: 75%;
+    top: 50%;
+    width: 85%;
+    transform: rotate(-90deg);
+  }
+
+/*main_section6  */
+  .main_section6 .form_box {
+    max-height: 496px;
+    min-height: 450px;
+    min-width: 500px;
+    width: 50%;
+    height: 60%;
+    top:34%;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  .slide6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* main_section7  */
+  .partners_logo{
+    height: 70%;
+  }
+  
+
+
+   }
+ 
+ 
+
+
+/* main section swiper1 */
+@media all and (max-width: 768px) {
+  .main_section {
+    position: relative;
+    width: 100%;
+    background: url(../imges/p_imges/tablet-mv-bg.jpg)  center center no-repeat;
+    background-size: 100% cover;
+  }
+
+  .main_text {
+    display: none;
+  }
+
+  .main_text2 {
+    width: 77.6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+  }
+
+  .main_text2 li:nth-child(2) {
+    margin-top: 2%;
+  }
+
+  .main_text2 li img {
+    width: 100%;
+  }
+
+  /* main_section2 */
+  .info_box .swiper-slide img {
+    width: 70%;
+  }
+  /* main_section3 */
+
+  .section_container {
+    width: 80%;
+  }
+
+  .sec-tit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
+
+  .sec-tit .title {
+    margin-left: 10px;
+    color: #be3455;
+    font-size: 24px;
+  }
+
+  .service_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .service_list li {
+    width: 48%;
+    margin-bottom: 4%;
+  }
+
+  .service_list li a > img {
+    width: 98%;
+    height: auto;
+    border: 1px dashed;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px dashed #f9a4a6;
+    box-shadow: 1px 1px 5px 1px #c07b7b;
+  }
+
+  .service_list li a > img:hover {
+    opacity: 1;
+  }
+
+  .service_list li > p,
+  .sale_sub_list {
+    display: none;
+  }
+
+  .background_rose {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    left: -150px;
+    top: 50%;
+    width: 75%;
+    transform: rotate(30deg);
+  }
+
+  .background_rose:nth-child(2) {
+    left: 65%;
+    top: 10%;
+    width: 75%;
+    transform: rotate(-50deg);
+  }
+
+  /* main_section4 */
+  .main_section4 .container {
+    width: 100%;
+    height: 70%;
+  }
+
+  .review_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0px;
+  }
+
+  .photodeem {
+    width: 100%;
+    height: 100%;
+    background: rgba(190, 52, 85, 0.8);
+    position: absolute;
+  }
+
+  .photodeem:hover {
+    background: rgba(190, 52, 85, 0.8);
+  }
+
+  .review_list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .review_list > div {
+    width: 100%;
+  }
+
+  .review_photo {
+    position: relative;
+  }
+
+  .review_img a img:nth-last-child(2) {
+    display: none;
+  }
+
+  .review_img a img:nth-last-child(1) {
+    display: block;
+    width: 100%;
+  }
+
+  .review_text_box {
+    background: none;
+    text-align: center;
+    position: absolute;
+  }
+
+  .texts {
+    margin-left: 0%;
+  }
+
+  .review_text_box span {
+    font-size: 3.6vw;
+    font-weight: 500;
+    display: block;
+  }
+
+  .review_text_box p {
+    font-size: 2.5vw;
+    display: block;
+    margin: 7.2% 0;
+  }
+
+  .review_text_box p:last-child {
+    font-size: 2.3vw;
+    margin: 0;
+  }
+
+  .more_btn {
+    right: 42%;
+    bottom: -72px;
+    width: 16%;
+  }
+
+  .background_rose2 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    left: -150px;
+    top: 10%;
+    width: 70%;
+    transform: rotate(-30deg);
+  }
+
+  .background_rose2:nth-child(2) {
+    left: 75%;
+    top: 50%;
+    width: 85%;
+    transform: rotate(-90deg);
+  }
+
+  /* main_section5 */
+
+  
+
+  .main_section5 .container {
+    justify-content: center;
+  }
+
+  .slide_img {
+    width: 100%;
+    margin-top: 0%;
+    border-radius: 10px;
+  }
+
+  .background_rose3 {
+    left: -20%;
+    top: 5%;
+    width: 60%;
+    transform: rotate(300deg);
+  }
+
+  .background_rose3_1 {
+    display: none;
+  }
+
+  .background_rose3_2 {
+    left: 60%;
+    top: 55%;
+    width: 58%;
+    transform: rotate(-120deg);
+  }
+
+  /* main_section6 */
+  .main_section6 .form_box {
+    max-height: 496px;
+    min-height: 450px;
+    min-width: 500px;
+    top:27%;
+    width: 71%;
+    height: 60%;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  #input1,
+  #zender,
+  #study,
+  #city,
+  #MBTI,
+  #input2,
+  #input3 {
+    padding: 15px;
+    margin-top: 13px;
+    font-size: 2.2vw;
+  }
+
+  .form_box .sec-tit {
+    padding-bottom: 3%;
+  }
+
+  .form_btn {
+    right: 5%;
+    bottom: 4%;
+  }
+
+  .background6 {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+
+
+
+  /* main_section7 */
+  .main_section7 .container {
+    margin-bottom: 150px;
+  }
+
+  .partners_logo{
+    height: 55%;
+  }
+
+  .partners_logo_lists {
+    justify-content: center;
+    margin-top: 20%;
+  }
+}
+
