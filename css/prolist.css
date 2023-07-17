@@ -1,0 +1,141 @@
+.none{
+  text-indent: -9999px;
+}
+.earbudsList{
+  padding: 120px 0;
+}
+.earbudsList .cont{
+  flex-direction: column;
+}
+
+.earbudsList .head1,
+.earbudsList .subT{
+  text-align: center;
+}
+.proPageList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+.proPageList li{
+  width: 23%;
+  padding: 2.3% 2.3% 6.6%;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+}
+.proPageList li:hover{
+  background-color: #ffad00;
+  color: #fff;
+}
+.proPageList li a{
+  display: block;
+}
+.proPageList li .imgWrap{
+  position: relative;
+  width: 100%;
+}
+
+
+.proPageList li .imgWrap img{
+  width: 100%;
+  transition: 0.3s;
+  display: none;
+}
+.proPageList li .imgWrap img.visible{
+  display: block;
+}
+
+.proPageList li:hover .imgWrap img{
+  transform: scale(1.07);
+}
+.proPageList li:hover .imgWrap .head4{
+  color: #fff;
+}
+.proPageList li .imgWrap .head4{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.proPageList li .colorWrap{
+  position: absolute;
+  bottom: -50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  transition-duration: 0.3s;
+}
+.proPageList li:hover .colorWrap{
+  bottom: 6.6%;
+}
+.proPageList li .colorWrap div{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.proPageList li .colorWrap div:last-child{
+  margin-right: 0;
+}
+.proPageList li .colorWrap div.selected{
+  width: 36px;
+  height: 36px;
+}
+.white{
+  background-color: #fff;
+  border: 1px solid #1b1b1b;
+}
+.black{
+  background-color: #1b1b1b;
+}
+.proPageList li .colorWrap .pink{
+  background-color: #f66;
+  border: 1px solid #1b1b1b;
+}
+.proPageList li .colorWrap .gray{
+  background-color: #fdfdfd;
+  border: 1px solid #1b1b1b;
+}
+.pagination ul{
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+  min-width: 280px;
+  margin: 0 auto;
+}
+.pagination ul li a{
+  display: flex;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #1b1b1b;
+  align-items: center;
+  justify-content: center;
+}
+.pagination ul li a:hover{
+  border: 1px solid #ffad00;
+  background-color: #ffad00;
+  color: #fff;
+  fill: #fff;
+}
+.pagination ul li a:hover svg path{
+  fill: #fff;
+}
+@media all and (max-width:1024px){
+  .proPageList li{
+    width: 32%;
+    padding: 3.2% 3.2% 9.4%;
+  }
+}
+@media all and (max-width: 768px){
+  .proPageList li{
+    width: 48%;
+    padding: 4% 4% 12%;
+  }
+}
