@@ -28,10 +28,7 @@
   padding-bottom: 16px;
   width: 100%;
 }
-.proDetail .bigSlide .swiper-slide,
-.proDetail .bigSlide2 .swiper-slide{
-  margin-right: 16px;
-}
+
 .proDetail .bigSlide .swiper-slide img,
 .proDetail .bigSlide2 .swiper-slide img{
   padding: 10%;
