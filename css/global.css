@@ -93,6 +93,7 @@ button.qcyBtn{
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  cursor: pointer;
 }
 button.qcyBtn::after{
   font-family: "Material Icons";

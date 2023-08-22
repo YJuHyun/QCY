@@ -329,6 +329,40 @@ h2 a{
   width: 100%;
   margin-top: 40px;
 }
+.rayerPopup{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popupTextWrap{
+  width: 50%;
+  background-color: #fff;
+  padding: 8%;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow:
+  6.7px 3.5px 5.3px rgba(0, 0, 0, 0.014),
+  22.3px 11.8px 17.9px rgba(0, 0, 0, 0.019),
+  100px 53px 80px rgba(0, 0, 0, 0.05)
+;
+}
+.popupTextWrap button{
+  border: 0;
+  font-size: 16px;
+  background-color: #ffad00;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 30px;
+  margin-top: 24px;
+  cursor: pointer;
+}
 @media all and (max-width: 1024px){
   .mvSlide .swiper-pagination-progressbar.swiper-pagination-horizontal{
     display: none;
@@ -361,6 +395,13 @@ h2 a{
   }
   .lastNews li .dim{
     height: 90px;
+  }
+  .popupTextWrap{
+    width: 70%;
+
+  }
+  .popupTextWrap .head2{
+    font-size: 24px;
   }
 }
 @media all and (max-width: 768px){
@@ -510,5 +551,11 @@ h2 a{
   .contact .map{
     width: 100%;
     margin-top: 40px;
+  }
+  .popupTextWrap{
+    width: 90%;
+  }
+  .popupTextWrap .head2{
+    font-size: 20px;
   }
 }
