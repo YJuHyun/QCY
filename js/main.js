@@ -165,3 +165,10 @@
 		"mapHeight" : "320"
 	}).render();
 
+// dim popup
+  let dimPopup = document.querySelector(".rayerPopup")
+  let cancelBtn = document.querySelector(".dimCancel")
+
+  cancelBtn.addEventListener("click", ()=>{
+    dimPopup.style.display = "none"
+  })
